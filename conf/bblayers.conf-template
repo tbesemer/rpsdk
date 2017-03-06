@@ -1,0 +1,16 @@
+# POKY_BBLAYERS_CONF_VERSION is increased each time build/conf/bblayers.conf
+# changes incompatibly
+POKY_BBLAYERS_CONF_VERSION = "2"
+
+BBPATH = "${TOPDIR}"
+BBFILES ?= ""
+
+BBLAYERS ?= " \
+  __YOCTO__/yocto/poky/meta \
+  __YOCTO__/yocto/poky/meta-poky \
+  __YOCTO__/yocto/poky/meta-yocto-bsp \
+  __YOCTO__/yocto/meta-openembedded/meta-oe \
+  __YOCTO__/yocto/meta-openembedded/meta-multimedia \
+  __YOCTO__/yocto/meta-raspberrypi \
+  __YOCTO__/yocto/meta-libuvc \
+  "
