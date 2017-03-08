@@ -1,10 +1,10 @@
 # Configuration.
 
-MACHINE = "raspberrypi2"
+MACHINE = "raspberrypi3"
 
 DL_DIR ?= "__HOME__/rp/dl"
 
-SSTATE_DIR ?= "__HOME__/rp/sstate-cache"
+SSTATE_DIR ?= "__HOME__/rp/rp3-sstate-cache"
 
 DISTRO ?= "poky"
 PACKAGE_CLASSES ?= "package_rpm"
@@ -29,13 +29,22 @@ PACKAGECONFIG_append_pn-qemu-native = " sdl"
 PACKAGECONFIG_append_pn-nativesdk-qemu = " sdl"
 
 CONF_VERSION = "1"
-#KERNEL_IMAGETYPE = "uImage"
-#VIDEO_CAMERA = "1"
-#ENABLE_SPI_BUS = "1"
-#ENABLE_I2C = "1"
+KERNEL_IMAGETYPE = "uImage"
+VIDEO_CAMERA = "1"
+ENABLE_SPI_BUS = "1"
+ENABLE_I2C = "1"
+ENABLE_UART = "1"
 
 IMAGE_INSTALL_append += " libusb-compat libstdc++ libuvc"
 PREFERRED_PROVIDER_jpeg ="libjepg-turbo"
 PREFERRED_PROVIDER_jpeg-native ="libjepg-turbo-native"
 IMAGE_INSTALL_append += "libjpeg-turbo"
+
+IMAGE_INSTALL_append += "gstreamer"
+IMAGE_INSTALL_append += "gst-plugins-good"
+IMAGE_INSTALL_append += "gst-plugins-base"
+LICENSE_FLAGS_WHITELIST += "commerical"
+COMMERICAL_VIDEO_PLUGINS ?= "gst-plugins-ugly gst-plugins-bad"
+
+IMAGE_INSTALL_append += "v4l-utils"
 
