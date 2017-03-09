@@ -28,8 +28,9 @@ BB_DISKMON_DIRS = "\
 PACKAGECONFIG_append_pn-qemu-native = " sdl"
 PACKAGECONFIG_append_pn-nativesdk-qemu = " sdl"
 
+GPU_MEM= "64"
 CONF_VERSION = "1"
-KERNEL_IMAGETYPE = "uImage"
+#KERNEL_IMAGETYPE = "uImage"
 VIDEO_CAMERA = "1"
 ENABLE_SPI_BUS = "1"
 ENABLE_I2C = "1"
@@ -47,4 +48,6 @@ LICENSE_FLAGS_WHITELIST += "commerical"
 COMMERICAL_VIDEO_PLUGINS ?= "gst-plugins-ugly gst-plugins-bad"
 
 IMAGE_INSTALL_append += "v4l-utils"
+
+CORE_IMAGE_EXTRA_INSTALL += "opencv libopencv-core libopencv-imgproc" 
 
