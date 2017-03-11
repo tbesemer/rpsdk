@@ -28,7 +28,7 @@ BB_DISKMON_DIRS = "\
 PACKAGECONFIG_append_pn-qemu-native = " sdl"
 PACKAGECONFIG_append_pn-nativesdk-qemu = " sdl"
 
-GPU_MEM= "64"
+GPU_MEM= "256"
 CONF_VERSION = "1"
 #KERNEL_IMAGETYPE = "uImage"
 VIDEO_CAMERA = "1"
@@ -51,3 +51,6 @@ IMAGE_INSTALL_append += "v4l-utils"
 
 CORE_IMAGE_EXTRA_INSTALL += "opencv libopencv-core libopencv-imgproc" 
 
+TOOLCHAIN_HOST_TASK += "nativesdk-cmake"
+
+IMAGE_INSTALL_append += "rpi-gpio"
