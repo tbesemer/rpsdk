@@ -36,7 +36,7 @@ ENABLE_SPI_BUS = "1"
 ENABLE_I2C = "1"
 ENABLE_UART = "1"
 
-IMAGE_INSTALL_append += " libusb-compat libstdc++ libuvc"
+IMAGE_INSTALL_append += " libusb-compat libstdc++ libuvc libuvc-dev"
 PREFERRED_PROVIDER_jpeg ="libjepg-turbo"
 PREFERRED_PROVIDER_jpeg-native ="libjepg-turbo-native"
 IMAGE_INSTALL_append += "libjpeg-turbo"
@@ -54,3 +54,4 @@ CORE_IMAGE_EXTRA_INSTALL += "opencv libopencv-core libopencv-imgproc"
 TOOLCHAIN_HOST_TASK += "nativesdk-cmake"
 
 IMAGE_INSTALL_append += "rpi-gpio"
+IMAGE_INSTALL_append += "dosfstools"

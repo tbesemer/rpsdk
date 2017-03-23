@@ -11,6 +11,7 @@ BBLAYERS ?= " \
   __YOCTO__/yocto/poky/meta-yocto-bsp \
   __YOCTO__/yocto/meta-openembedded/meta-oe \
   __YOCTO__/yocto/meta-openembedded/meta-multimedia \
+  __YOCTO__/yocto/meta-openembedded/meta-filesystems \
   __YOCTO__/yocto/meta-raspberrypi \
   __YOCTO__/yocto/meta-libuvc \
   "
