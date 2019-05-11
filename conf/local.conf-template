@@ -6,6 +6,8 @@ DL_DIR ?= "__HOME__/rp/dl"
 
 SSTATE_DIR ?= "__HOME__/rp/rp3-sstate-cache"
 
+BB_NUMBER_THREADS = "2"
+
 DISTRO ?= "poky"
 PACKAGE_CLASSES ?= "package_rpm"
 
@@ -36,22 +38,22 @@ ENABLE_SPI_BUS = "1"
 ENABLE_I2C = "1"
 ENABLE_UART = "1"
 
-IMAGE_INSTALL_append += " libusb-compat libstdc++ libuvc libuvc-dev"
-PREFERRED_PROVIDER_jpeg ="libjepg-turbo"
-PREFERRED_PROVIDER_jpeg-native ="libjepg-turbo-native"
-IMAGE_INSTALL_append += "libjpeg-turbo"
+#IMAGE_INSTALL_append += " libusb-compat libstdc++ libuvc libuvc-dev"
+#PREFERRED_PROVIDER_jpeg ="libjepg-turbo"
+#PREFERRED_PROVIDER_jpeg-native ="libjepg-turbo-native"
+#IMAGE_INSTALL_append += "libjpeg-turbo"
 
-IMAGE_INSTALL_append += "gstreamer"
-IMAGE_INSTALL_append += "gst-plugins-good"
-IMAGE_INSTALL_append += "gst-plugins-base"
-LICENSE_FLAGS_WHITELIST += "commerical"
-COMMERICAL_VIDEO_PLUGINS ?= "gst-plugins-ugly gst-plugins-bad"
+#IMAGE_INSTALL_append += "gstreamer"
+#IMAGE_INSTALL_append += "gst-plugins-good"
+#IMAGE_INSTALL_append += "gst-plugins-base"
+#LICENSE_FLAGS_WHITELIST += "commerical"
+#COMMERICAL_VIDEO_PLUGINS ?= "gst-plugins-ugly gst-plugins-bad"
 
-IMAGE_INSTALL_append += "v4l-utils"
+#IMAGE_INSTALL_append += "v4l-utils"
 
-CORE_IMAGE_EXTRA_INSTALL += "opencv libopencv-core libopencv-imgproc" 
+#CORE_IMAGE_EXTRA_INSTALL += "opencv libopencv-core libopencv-imgproc" 
 
-TOOLCHAIN_HOST_TASK += "nativesdk-cmake"
+#TOOLCHAIN_HOST_TASK += "nativesdk-cmake"
 
-IMAGE_INSTALL_append += "rpi-gpio"
+#IMAGE_INSTALL_append += "rpi-gpio"
 IMAGE_INSTALL_append += "dosfstools"

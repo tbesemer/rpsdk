@@ -17,18 +17,18 @@ fi
 
 if [ ! -d poky ]
 then
-    git clone -b morty git://git.yoctoproject.org/poky.git
+    git clone -b sumo git://git.yoctoproject.org/poky.git
 fi
 
 
 if [ ! -d meta-openembedded ]
 then
-    git clone -b morty https://github.com/openembedded/meta-openembedded.git
+    git clone -b sumo https://github.com/openembedded/meta-openembedded.git
 fi
 
 if [ ! -d meta-raspberrypi ]
 then
-    git clone -b morty https://github.com/agherzan/meta-raspberrypi.git
+    git clone -b sumo https://github.com/agherzan/meta-raspberrypi.git
 fi
 
 if [ ! -d meta-libuvc ]
