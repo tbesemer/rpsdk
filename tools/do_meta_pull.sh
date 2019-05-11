@@ -36,6 +36,12 @@ then
     git clone https://github.com/tbesemer/meta-libuvc.git
 fi
 
+if [ ! -d meta-tbos ]
+then
+    git clone https://github.com/tbesemer/meta-tbos.git
+fi
+
+
 cd poky; . ./oe-init-build-env
 cd $CWD
  
