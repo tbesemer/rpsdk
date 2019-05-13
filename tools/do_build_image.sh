@@ -13,10 +13,10 @@ pwd
 
 . ./oe-init-build-env
 
-bitbake rpi-basic-image
+bitbake core-image-base
 if [ $? -ne 0 ]
 then
-    echo "bitbake rpi-basic-image FAILED"
+    echo "bitbake core-image-base FAILED"
     exit 1
 fi
 

@@ -13,10 +13,10 @@ pwd
 
 . ./oe-init-build-env
 
-bitbake rpi-basic-image -c populate_sdk
+bitbake core-image-base -c populate_sdk
 if [ $? -ne 0 ]
 then
-    echo "bitbake rpi-basic-image -c populate_sdk FAILED"
+    echo "bitbake core-image-base -c populate_sdk FAILED"
     exit 1
 fi
 

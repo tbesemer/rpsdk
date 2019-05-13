@@ -57,3 +57,5 @@ ENABLE_UART = "1"
 
 #IMAGE_INSTALL_append += "rpi-gpio"
 IMAGE_INSTALL_append += "dosfstools"
+IMAGE_INSTALL_append += "saoscli"
+IMAGE_INSTALL_append += "openssh"
